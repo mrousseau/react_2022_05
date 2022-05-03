@@ -6,9 +6,9 @@ import Button from './components/ui/Buttons/Button'
 function App() {
   return (
     <div className="App">
-      <Button toto="un text du button"></Button>
+      <Button toto="un text du button" bgColor='red'></Button>
       <Button>du text children</Button>
-      <Button>
+      <Button bgColor='blue'>
         <div>du text children node </div>
       </Button>
       <Button>
