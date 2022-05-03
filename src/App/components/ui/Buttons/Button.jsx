@@ -1,11 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'; 
 
 import style from './Button.module.css'
 
+//protection contre double click sur le bouton 
+let desccripteur=undefined;
+
 const Button = (props) => {
-    
     const [isClicked, setIsClicked] = useState(false);
+    useEffect(()=>{
+        console.log('isClicked a changer->', isClicked);
+        if(isClicked===true && desccripteur === undefined){
+            setTimeout(()=>{
+                setIsClicked(false);
+                desccripteur= undefined;
+            },1000);
+        }
+        
+    }, [isClicked])
 
     return <button 
         className={style.Button} 
