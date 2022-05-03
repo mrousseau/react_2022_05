@@ -1,0 +1,60 @@
+{
+  "memes": [
+    {
+      "id": 0,
+      "titre": "titre meme 1",
+      "text": "Mon meme",
+      "x": 100,
+      "y": 100,
+      "fontSize": 12,
+      "fontWeight": 700,
+      "color": "#ADE0F1",
+      "underline": true,
+      "italic": false,
+      "imageId": 0
+    },
+    {
+      "titre": "titre meme 2",
+      "text": "Mon meme 2",
+      "x": 50,
+      "y": 100,
+      "fontSize": 12,
+      "fontWeight": 700,
+      "color": "#ADE0F1",
+      "underline": true,
+      "italic": false,
+      "imageId": 0,
+      "id": 1
+    }
+  ],
+  "images": [
+    {
+      "id": 0,
+      "title": "alien",
+      "href": "alien.jpg",
+      "w": 225,
+      "h": 225
+    },
+    {
+        "id": 1,
+        "title": "futurama",
+        "href": "futurama.jpg",
+        "w": 1904,
+        "h": 1071
+      },
+      {
+        "id": 2,
+        "title": "simpson",
+        "href": "simpson.jpg",
+        "w": 275,
+        "h": 183
+      },
+      {
+        "id": 3,
+        "title": "yoda",
+        "href": "yoda.jpg",
+        "w": 275,
+        "h": 183
+      }
+  ]
+}
