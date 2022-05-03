@@ -6,13 +6,14 @@ import Button from './components/ui/Buttons/Button'
 function App() {
   return (
     <div className="App">
-      {/* <Button text="un text du button"></Button> */}
+      <Button toto="un text du button"></Button>
+      <Button>du text children</Button>
       <Button>
-        <div>du text children</div>
+        <div>du text children node </div>
       </Button>
       <Button>
-        <div>du text children1</div>
-        <div>du text children2</div>
+        <div>du text children node 1</div>
+        <div>du text children node 2</div>
       </Button>
     </div>
   );
