@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <Button toto="un text du button" bgColor='red'></Button>
       <Button color='orange'>du text children</Button>
-      <Button color='black'>
+      <Button color='black' onButtonClicked= {()=>{
+        console.log('buttonClick');
+      }}>
         <div>du text children node </div>
       </Button>
       <Button bgColor='blue' style={{textDecoration: 'underline', fontWeight:900, fontStyle: 'Arial'}}>
