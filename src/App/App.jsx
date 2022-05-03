@@ -7,11 +7,11 @@ function App() {
   return (
     <div className="App">
       <Button toto="un text du button" bgColor='red'></Button>
-      <Button>du text children</Button>
-      <Button bgColor='blue'>
+      <Button color='orange'>du text children</Button>
+      <Button color='black'>
         <div>du text children node </div>
       </Button>
-      <Button>
+      <Button bgColor='blue'>
         <div>du text children node 1</div>
         <div>du text children node 2</div>
       </Button>
