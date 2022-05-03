@@ -2,11 +2,16 @@ import React from 'react'
 import Button from './components/ui/Buttons/Button'
 
 class App extends React.Component {
-constructor(props) {
-  super(props)
-  this.state={count:1, title:"title de l'app"}
-}
+  constructor(props) {
+    super(props)
+    this.state={count:1, title:"title de l'app"}
+  }
   
+
+  componentDidUpdate(oldProps, oldState)
+  {
+    console.log('component update ',oldState, this.state );
+  }
 
   render() {
     return (
