@@ -1,15 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './FlexW.module.css';
+import React from 'react'
 
-const FlexW = () => (
-  <div className={styles.FlexW} data-testid="FlexW">
-    FlexW Component
-  </div>
-);
+import PropTypes from 'prop-types'
 
-FlexW.propTypes = {};
+import style from './FlexW.module.css'
 
-FlexW.defaultProps = {};
+function FlexW(props) {
 
-export default FlexW;
+  return (
+
+    <div className={style.FlexW} data-testid="FlexW">{props.children}</div>
+
+  )
+
+}
+
+FlexW.propTypes = {
+    children: PropTypes.any.isRequired,
+}
+
+export default FlexW

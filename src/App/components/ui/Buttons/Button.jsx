@@ -20,7 +20,7 @@ const Button = (props) => {
     }, [isClicked])
 
     return <button 
-        className={style.Button} 
+        className={`${style.Button}${isClicked?' '+style.clicked:''}`} 
         style={{...props.style, backgroundColor: props.bgColor, color: props.color}}
         type={props.type}
         onClick={(evt)=>{

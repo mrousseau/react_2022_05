@@ -31,28 +31,28 @@
     {
       "id": 0,
       "title": "alien",
-      "href": "alien.jpg",
+      "url": "alien.jpg",
       "w": 225,
       "h": 225
     },
     {
         "id": 1,
         "title": "futurama",
-        "href": "futurama.jpg",
+        "url": "futurama.jpg",
         "w": 1904,
         "h": 1071
       },
       {
         "id": 2,
         "title": "simpson",
-        "href": "simpson.jpg",
+        "url": "simpson.jpg",
         "w": 275,
         "h": 183
       },
       {
         "id": 3,
         "title": "yoda",
-        "href": "yoda.jpg",
+        "url": "yoda.jpg",
         "w": 275,
         "h": 183
       }

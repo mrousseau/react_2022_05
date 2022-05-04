@@ -1,4 +1,6 @@
+import { MemeSVGThumbnail, MemeSVGViewer } from 'orsys-tjs-meme';
 import React from 'react'
+import FlexW from './components/layout/FlexW/FlexW';
 // import Button from './components/ui/Buttons/Button'
 import { ADDR_REST } from './config/config';
 
@@ -9,9 +11,11 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    const memes = fetch(ADDR_REST+"/memes").then(flux=>{flux.json()}).then(arr=>this.setState({memes:arr}));
-    const images = fetch(ADDR_REST+"/images").then(flux=>{flux.json()}).then(arr=>this.setState({images:arr}));
-    Promise.all([memes, images]).then(arr=>this.setState({memes:arr[0], images:[1]}));
+    const memes = fetch(ADDR_REST+"/memes").then(flux=>flux.json());
+    const images = fetch(ADDR_REST+"/images").then(flux=>flux.json());
+    Promise.all([memes, images]).then(arr=>{
+      this.setState({memes:arr[0], images:arr[1]})});
+
   }
 
   componentDidUpdate(oldProps, oldState)
@@ -24,6 +28,11 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
+      {/* <Button></Button> */}
+      <FlexW>
+      {this.state.memes.length && <MemeSVGViewer meme={this.state.memes[0]} image={this.state.images.find(e=> e.id === this.state.memes[0].imageId)} />
+      }
+      </FlexW>
         {JSON.stringify(this.state)}
       </div>
     )
