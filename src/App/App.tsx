@@ -6,6 +6,7 @@ import MemeForm from './components/ui/MemeForm/MemeForm';
 // import Button from './components/ui/Buttons/Button'
 import { ADDR_REST } from './config/config';
 import MemeThumbnail from '../App/components/ui/MemeThunmbnail/MemeThunmbnail';
+import {store} from './store/store';
 
 interface IAppSate{
   memes:Array<IMeme>,
@@ -22,6 +23,7 @@ class App extends React.Component<IappProps,IAppSate> {
   }
 
   componentDidMount(){
+    console.log('store:',store.getState());
     const memes = fetch(ADDR_REST+"/memes").then(flux=>flux.json());
     const images = fetch(ADDR_REST+"/images").then(flux=>flux.json());
     Promise.all([memes, images]).then(arr=>{
