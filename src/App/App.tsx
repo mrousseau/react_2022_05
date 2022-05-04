@@ -5,7 +5,7 @@ import FlexW from './components/layout/FlexW/FlexW';
 import MemeForm from './components/ui/MemeForm/MemeForm';
 // import Button from './components/ui/Buttons/Button'
 import { ADDR_REST } from './config/config';
-import MemeThumbnail from '../App/components/ui/MemeThunmbnail/MemeThunmbnail';
+import MemeThumbnail, { ConnectedMemThumbnail } from '../App/components/ui/MemeThunmbnail/MemeThunmbnail';
 import {store} from './store/store';
 
 interface IAppSate{
@@ -42,7 +42,8 @@ class App extends React.Component<IappProps,IAppSate> {
     return (
       <div className='App'>
       {/* <Button></Button> */}
-      <MemeThumbnail memes={this.state.memes} images={this.state.images}/>
+      {/* <MemeThumbnail memes={this.state.memes} images={this.state.images}/> */}
+      <ConnectedMemThumbnail />
       <FlexW>
       {this.state.memes.length && <MemeSVGViewer meme={this.state.current} image={this.state.images.find(e=> e.id === this.state.current.imageId)} />
       }

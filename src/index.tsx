@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App/App';
+import {store} from './App/store/store'
+import { Provider } from 'react-redux';
 // import reportWebVitals from './reportWebVitals'; --rappport de perf fournit par html
 
 
@@ -11,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   /**React.StrictMode -> permet de mettre mute sur les erreur explicite */
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

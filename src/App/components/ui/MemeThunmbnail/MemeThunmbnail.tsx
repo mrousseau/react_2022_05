@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import style from "./MemeThunmbnail.module.css";
 import { IImage, IMeme } from "../../../../interfaces/common";
 import { MemeSVGViewer } from "orsys-tjs-meme";
+import { connect } from "react-redux";
 
 interface IMemeFormProps{
   images:Array<IImage>,
@@ -26,4 +27,17 @@ MemeThunmbnail.propTypes = {
 };
 MemeThunmbnail.defaultProps = {};
 
+function mapStateToProps(state, ownprops: any){
+  return {
+    ...ownprops,
+    memes:state.memes,
+    images: state.images
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {}
+}
+
+export const ConnectedMemThumbnail=connect(mapStateToProps, mapDispatchToProps)(MemeThunmbnail)
 export default MemeThunmbnail;
