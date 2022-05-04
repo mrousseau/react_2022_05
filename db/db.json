@@ -11,7 +11,7 @@
       "color": "#ADE0F1",
       "underline": true,
       "italic": false,
-      "imageId": 0
+      "imageId": 1
     },
     {
       "titre": "titre meme 2",
@@ -24,7 +24,20 @@
       "underline": true,
       "italic": false,
       "imageId": 0,
-      "id": 1
+      "id": 2
+    },
+    {
+      "id": 0,
+      "titre": "titre meme 3",
+      "text": "Mon meme",
+      "x": 100,
+      "y": 100,
+      "fontSize": 12,
+      "fontWeight": 700,
+      "color": "#ADE0F1",
+      "underline": true,
+      "italic": false,
+      "imageId": 3
     }
   ],
   "images": [

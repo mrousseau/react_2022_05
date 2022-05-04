@@ -1,1 +1,4 @@
-.MemeThunmbnail {}
+.MemeThunmbnail {
+    display: flex;
+    height: 80vh;
+}
