@@ -1,6 +1,7 @@
 import { MemeSVGThumbnail, MemeSVGViewer } from 'orsys-tjs-meme';
 import React from 'react'
 import FlexW from './components/layout/FlexW/FlexW';
+import MemeForm from './components/ui/MemeForm/MemeForm';
 // import Button from './components/ui/Buttons/Button'
 import { ADDR_REST } from './config/config';
 
@@ -32,6 +33,7 @@ class App extends React.Component {
       <FlexW>
       {this.state.memes.length && <MemeSVGViewer meme={this.state.memes[0]} image={this.state.images.find(e=> e.id === this.state.memes[0].imageId)} />
       }
+      <MemeForm images={this.state.images} />
       </FlexW>
         {JSON.stringify(this.state)}
       </div>

@@ -30,28 +30,28 @@
   "images": [
     {
       "id": 0,
-      "title": "alien",
+      "name": "alien",
       "url": "alien.jpg",
       "w": 225,
       "h": 225
     },
     {
         "id": 1,
-        "title": "futurama",
+        "name": "futurama",
         "url": "futurama.jpg",
         "w": 1904,
         "h": 1071
       },
       {
         "id": 2,
-        "title": "simpson",
+        "name": "simpson",
         "url": "simpson.jpg",
         "w": 275,
         "h": 183
       },
       {
         "id": 3,
-        "title": "yoda",
+        "name": "yoda",
         "url": "yoda.jpg",
         "w": 275,
         "h": 183
