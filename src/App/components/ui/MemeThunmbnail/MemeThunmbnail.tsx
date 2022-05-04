@@ -30,8 +30,8 @@ MemeThunmbnail.defaultProps = {};
 function mapStateToProps(state, ownprops: any){
   return {
     ...ownprops,
-    memes:state.memes,
-    images: state.images
+    memes:state.ressources.memes,
+    images: state.ressources.images
   }
 }
 
