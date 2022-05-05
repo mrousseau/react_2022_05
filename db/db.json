@@ -90,6 +90,32 @@
       "imageId": 1,
       "color": "#ff0000",
       "id": 6
+    },
+    {
+      "titre": "Aurelie",
+      "text": "Quand Aurélie se réveil le matin",
+      "x": 15,
+      "y": 90,
+      "fontWeight": "500",
+      "fontSize": 14,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#ff0000",
+      "id": 7
+    },
+    {
+      "titre": "",
+      "text": "Aurelie ressemble a ça le matin",
+      "x": 18,
+      "y": 171,
+      "fontWeight": "500",
+      "fontSize": 17,
+      "underline": false,
+      "italic": false,
+      "imageId": 3,
+      "color": "#4dff00",
+      "id": 8
     }
   ],
   "images": [
