@@ -77,6 +77,19 @@
       "imageId": 1,
       "color": "#ff0000",
       "id": 5
+    },
+    {
+      "titre": "",
+      "text": "PowerTeam",
+      "x": 750,
+      "y": 100,
+      "fontWeight": "500",
+      "fontSize": 75,
+      "underline": false,
+      "italic": false,
+      "imageId": 1,
+      "color": "#ff0000",
+      "id": 6
     }
   ],
   "images": [

@@ -4,6 +4,7 @@ import style from "./MemeThunmbnail.module.css";
 import { IImage, IMeme } from "../../../../interfaces/common";
 import { MemeSVGViewer } from "orsys-tjs-meme";
 import { connect } from "react-redux";
+import {Link} from 'react-router-dom';
 
 interface IMemeFormProps{
   images:Array<IImage>,
@@ -16,7 +17,9 @@ const MemeThunmbnail : React.FunctionComponent<IMemeFormProps> = (props) => {
   useEffect(() => {}, []);
   return (
     <div className={style.MemeThunmbnail} data-testid="MemeThunmbnail">
-      {props.memes.map((m, i)=> <MemeSVGViewer key={`thumb-`+i} meme={m} image={props.images.find((e)=> e.id === m.imageId)}/>)}
+      
+      {props.memes.map((m, i)=> 
+          <Link to={`/edit/${m.id}`} key={`lk-`+i}><MemeSVGViewer key={`thumb-`+i} meme={m} image={props.images.find((e)=> e.id === m.imageId)}/></Link>)}
     </div>
   );
 };

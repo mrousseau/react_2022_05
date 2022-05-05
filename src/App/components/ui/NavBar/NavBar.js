@@ -19,7 +19,7 @@ const NavBar = (props) => {
       <LinkContainer to='/new'><Nav.Link>New</Nav.Link></LinkContainer>
       <LinkContainer to='/edit'><Nav.Link>Edit/1</Nav.Link></LinkContainer>
       <LinkContainer to='/thumbnail'><Nav.Link>Thumbnail</Nav.Link></LinkContainer>
-      <LinkContainer to='/thumbnailPDF'><Nav.Link>ThumbnailPDF</Nav.Link></LinkContainer>
+      <LinkContainer to='/PDFthumbnail'><Nav.Link>PDFThumbnail</Nav.Link></LinkContainer>
     </Nav>
     </Container>
   </Navbar>

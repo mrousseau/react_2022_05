@@ -18,7 +18,7 @@ interface IMemeFormProps{
 }
 
 const MemeForm: React.FunctionComponent<IMemeFormProps> = (props) => {
-  console.log(props);
+  console.log('MemeForm----', props);
 
   function onTextChange(evt:React.ChangeEvent<HTMLInputElement|HTMLSelectElement>){
     const assembleResult={};

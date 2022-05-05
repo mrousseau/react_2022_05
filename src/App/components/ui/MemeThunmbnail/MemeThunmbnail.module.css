@@ -21,4 +21,5 @@
 /* .MemeThunmbnail {
     display: flex;
     height: 80vh;
+    overflow-y: auto;
 } */

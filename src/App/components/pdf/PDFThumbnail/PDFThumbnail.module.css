@@ -1,0 +1,27 @@
+.PDFMemeThumbnail {
+    display: flex;
+    height: 90vh;
+    overflow-y: auto;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    flex-wrap: wrap;
+  }
+
+/* .PDFMemeThumbnail {
+    display: flex;
+    height:90vh;
+    overflow-y: auto;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    flex-wrap:wrap;
+}
+
+.PDFMemeThumbnail>*{
+    width:24vw;
+    height:24vh;
+}
+
+.PDFMemeThumbnail>*>svg{
+    height: 100%;
+    width: 100%;
+} */
