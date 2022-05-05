@@ -160,7 +160,7 @@ const MemeForm: React.FunctionComponent<IMemeFormProps> = (props) => {
   );
 };
 
-
+//mstp map state to props
 function mstp(state,ownprops){
   return {
     ...ownprops, 
@@ -169,6 +169,7 @@ function mstp(state,ownprops){
   }
 }
 
+//mdtp map dispatch to props
 function mdtp(dispatch){
   return {
     onFormChange:(objt:any)=>(dispatch({type:ACTION_CURRENT.UPDATE_MEME, value:objt}))

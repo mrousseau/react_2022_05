@@ -1,4 +1,24 @@
 .MemeThunmbnail {
     display: flex;
-    height: 80vh;
+    height:90vh;
+    overflow-y: auto;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    flex-wrap:wrap;
 }
+
+.MemeThunmbnail>*{
+    width:24vw;
+    height:24vh;
+}
+
+.MemeThunmbnail>*>svg{
+    height: 100%;
+    width: 100%;
+}
+
+/*mon css*/
+/* .MemeThunmbnail {
+    display: flex;
+    height: 80vh;
+} */

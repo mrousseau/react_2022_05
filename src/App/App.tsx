@@ -25,12 +25,10 @@ class App extends React.Component<IappProps,IAppSate> {
   }
 
   componentDidMount(){
-    console.log('store:',store.getState());
     const memes = fetch(ADDR_REST+"/memes").then(flux=>flux.json());
     const images = fetch(ADDR_REST+"/images").then(flux=>flux.json());
     Promise.all([memes, images]).then(arr=>{
       this.setState({memes:arr[0], images:arr[1]})});
-
   }
 
   componentDidUpdate(oldProps, oldState)
