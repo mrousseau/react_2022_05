@@ -5,6 +5,10 @@ import App from './App/App';
 import {store} from './App/store/store'
 import { Provider } from 'react-redux';
 // import reportWebVitals from './reportWebVitals'; --rappport de perf fournit par html
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
 
 
 const root = ReactDOM.createRoot(
@@ -14,7 +18,9 @@ root.render(
   /**React.StrictMode -> permet de mettre mute sur les erreur explicite */
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>
 );
