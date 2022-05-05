@@ -64,6 +64,19 @@
       "imageId": 0,
       "color": "#ff0000",
       "id": 4
+    },
+    {
+      "titre": "",
+      "text": "dsdvcvvxcv",
+      "x": 0,
+      "y": 17,
+      "fontWeight": "500",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 1,
+      "color": "#ff0000",
+      "id": 5
     }
   ],
   "images": [

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import style from "./NavBar.module.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
-import {Link} from 'react-router-dom'
+import {LinkContainer} from 'react-router-bootstrap'
 const navBarInitialState = {};
 
 const NavBar = (props) => {
@@ -13,15 +13,13 @@ const NavBar = (props) => {
     <div className={style.NavBar} data-testid="NavBar">
      <Navbar bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="#home">Meme Generator</Navbar.Brand>
+    <LinkContainer to='/'><Navbar.Brand>Meme Generator</Navbar.Brand></LinkContainer>
     <Nav className="me-auto">
-      <Link to="/">Home</Link>
-      <Link to="/">New</Link>
-      {/* <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#new">New</Nav.Link>
-      <Nav.Link href="#edit">Edit/1</Nav.Link>
-      <Nav.Link href="#pircing">Thumbnail</Nav.Link>
-      <Nav.Link href="#thumbnail">ThumbnailPDF</Nav.Link> */}
+      <LinkContainer to='/'><Nav.Link>Home</Nav.Link></LinkContainer>
+      <LinkContainer to='/new'><Nav.Link>New</Nav.Link></LinkContainer>
+      <LinkContainer to='/edit'><Nav.Link>Edit/1</Nav.Link></LinkContainer>
+      <LinkContainer to='/thumbnail'><Nav.Link>Thumbnail</Nav.Link></LinkContainer>
+      <LinkContainer to='/thumbnailPDF'><Nav.Link>ThumbnailPDF</Nav.Link></LinkContainer>
     </Nav>
     </Container>
   </Navbar>
