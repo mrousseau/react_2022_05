@@ -30,7 +30,6 @@ const Button = (props) => {
         
         >{props.children}
         <br/>
-        {isClicked.toString()}
         </button>
 }
 Button.PropType={

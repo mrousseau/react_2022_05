@@ -38,6 +38,32 @@
       "underline": true,
       "italic": false,
       "imageId": 3
+    },
+    {
+      "titre": "",
+      "text": "dsfsdf",
+      "x": 0,
+      "y": 17,
+      "fontWeight": "500",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#df0c0c",
+      "id": 3
+    },
+    {
+      "titre": "",
+      "text": "gnarf glarf gnirf (Alien, 05/05/2022)",
+      "x": 45,
+      "y": 200,
+      "fontWeight": "500",
+      "fontSize": 11,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#ff0000",
+      "id": 4
     }
   ],
   "images": [
@@ -49,25 +75,25 @@
       "h": 225
     },
     {
-        "id": 1,
-        "name": "futurama",
-        "url": "futurama.jpg",
-        "w": 1904,
-        "h": 1071
-      },
-      {
-        "id": 2,
-        "name": "simpson",
-        "url": "simpson.jpg",
-        "w": 275,
-        "h": 183
-      },
-      {
-        "id": 3,
-        "name": "yoda",
-        "url": "yoda.jpg",
-        "w": 275,
-        "h": 183
-      }
+      "id": 1,
+      "name": "futurama",
+      "url": "futurama.jpg",
+      "w": 1904,
+      "h": 1071
+    },
+    {
+      "id": 2,
+      "name": "simpson",
+      "url": "simpson.jpg",
+      "w": 275,
+      "h": 183
+    },
+    {
+      "id": 3,
+      "name": "yoda",
+      "url": "yoda.jpg",
+      "w": 275,
+      "h": 183
+    }
   ]
 }

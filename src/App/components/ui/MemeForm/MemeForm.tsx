@@ -6,12 +6,15 @@ import { IImage } from "orsys-tjs-meme/dist/interfaces/common";
 import { IMeme } from "../../../../interfaces/common";
 import { ACTION_CURRENT } from "../../../store/store";
 import { connect } from "react-redux";
+import Button from "../Buttons/Button";
 
 
 interface IMemeFormProps{
   images:Array<IImage>,
   meme:IMeme,
-  onFormChange:Function
+  onFormChange:Function,
+  onFormSubmit:Function,
+  onFormReset:Function, 
 }
 
 const MemeForm: React.FunctionComponent<IMemeFormProps> = (props) => {
@@ -37,7 +40,15 @@ const MemeForm: React.FunctionComponent<IMemeFormProps> = (props) => {
 
   return (
        <div data-testid="MemeForm" className={styles.MemeForm}>
-        <form >
+        <form onSubmit={(evt:React.FormEvent<HTMLFormElement>)=>{
+            evt.preventDefault();
+            props.onFormSubmit();
+          }
+        } onReset={(evt:React.FormEvent<HTMLFormElement>)=>{
+          props.onFormReset();
+        } 
+       }
+        >
           <h1>Titre</h1>
           <input
             type="text"
@@ -153,7 +164,8 @@ const MemeForm: React.FunctionComponent<IMemeFormProps> = (props) => {
             </div>
           </div>
           <div className={styles.half}>
-           
+            <Button type="reset" bgColor="tomato">Reinit</Button>
+            <Button type="submit" bgColor="skyblue">save</Button>
           </div>
         </form>
       </div>
@@ -170,10 +182,18 @@ function mstp(state,ownprops){
 }
 
 //mdtp map dispatch to props
-function mdtp(dispatch){
+function mdtp(dispatch: Function) {
   return {
-    onFormChange:(objt:any)=>(dispatch({type:ACTION_CURRENT.UPDATE_MEME, value:objt}))
-  }
+    onFormChange: (objt: any) => {
+      dispatch({ type: ACTION_CURRENT.UPDATE_MEME, value: objt });
+    },
+    onFormSubmit: () => {
+      dispatch({ type: ACTION_CURRENT.SAVE_MEME });
+    },
+    onFormReset: () => {
+      dispatch({ type: ACTION_CURRENT.CLEAR_CURRENT });
+    },
+  };
 }
 export const ConnectedMemeForm=connect(mstp,mdtp)(MemeForm);
 export default MemeForm;

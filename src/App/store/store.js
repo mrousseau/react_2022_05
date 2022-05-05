@@ -12,13 +12,12 @@ const ressourcesInitialState = {
 export const ACTION_RESSOURCES = Object.freeze({
   ADD_ALL_RESSOURCES: "ADD_ALL_RESSOURCES",
   INIT_RESSOURCES: "INIT_RESSOURCES",
-  ADD_SAVE_MEME: "ADD_SAVE_MEME",
-  ADD_MEME: "ADD_MEME",
+  ADD_SAVED_MEME: "ADD_SAVED_MEME",
 });
 
 function ressourcesReducer(state = ressourcesInitialState, action) {
     switch (action.type) { 
-      case ACTION_RESSOURCES.ADD_MEME:
+      case ACTION_RESSOURCES.ADD_SAVED_MEME:
         return { ...state, memes: [...state.memes, action.value] };
       case ACTION_RESSOURCES.INIT_RESSOURCES:
         const memes = fetch(ADDR_REST + "/memes").then((flux) => flux.json());
@@ -50,19 +49,21 @@ function ressourcesReducer(state = ressourcesInitialState, action) {
       case ACTION_CURRENT.UPDATE_MEME:
         return { ...state, ...action.value };
       case ACTION_CURRENT.CLEAR_CURRENT:
-      case ACTION_RESSOURCES.ADD_SAVE_MEME:
+      case ACTION_RESSOURCES.ADD_SAVED_MEME:
         return { ...DummyMeme }; 
       case ACTION_CURRENT.SAVE_MEME:
-        fetch(`${ADDR_REST} + /memes${undefined!==state.id? '/' + state.id: ""}`,
-        {
-          method: `${undefined !== state.id ? "PUT" : "POST"}`,
-          headers: { "content-Type": "application/json" },
-          body: JSON.stringify(state),
-        }
-        ).then((flux) => flux.json()
-        ).then(o=>{
-          store.dispatch({type: ACTION_RESSOURCES.ADD_SAVE_MEME, value: o })
-        });
+        fetch(
+          `${ADDR_REST}/memes${undefined !== state.id ? "/" + state.id : ""}`,
+          {
+            method: `${undefined !== state.id ? "PUT" : "POST"}`,
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(state),
+          }
+        )
+          .then((flux) => flux.json())
+          .then((o) => {
+            store.dispatch({ type: ACTION_RESSOURCES.ADD_SAVED_MEME, value: o });
+          });
       default:
         return state;
     }
